@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+
+:root {
+    --submit-button: RGB(127, 166, 80);
+    --form-inputs-bg: RGB(60, 58, 56);
+    --form-bg: RGB(38, 36, 33); 
+    --body-bg: RGB(49, 46, 43);
+    --main-color: RGB(255, 255, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    font-family: "Noto Sans";
+    color: var(--main-color);
+}
+
+.form-title {
+    font-size: 1.8rem;
+}
+
+.form-title .order {
+    font-weight: bold;
+}
+
+.aside-img-container {
+    grid-column: 1 / 2;
+    background: var(--form-bg);
+    background-image: url("assets/Nature.png");
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position-y: 55%;
+    background-position-x: -90px;
+}
+
+.hero {
+    grid-column: 2 / 3;
+    background: var(--body-bg);
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    padding-left: 15px;
+}
+
+.inputs-container {
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: var(--form-bg);
+    border-bottom: 15px solid rgb(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-container input, select {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    width: 400px;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255, .9);
+    font-family: inherit;
+    background: rgb(0, 0, 0, .3);
+}
+
+.input-container select {
+    appearance: none;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    width: 400px;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    background: rgb(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+select:invalid {
+    color: grey;
+}
+
+option {
+    color: white;
+}
+
+#postal-code-input:disabled::placeholder {
+    color: rgb(255, 255, 255, .2);
+}
+
+.form-submit {
+    flex-grow: 0;
+    background-color: var(--submit-button);
+    font-size: 1.8rem;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 0;
+    border-bottom: 8px solid rgb(0, 0, 0, .3);
+    font-family: inherit;
+    color: var(--main-color);
+    text-shadow: 0px 1px black;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px black;
+}
+
+.form-submit:active {
+    opacity: .9;
+    box-shadow: 0 0;
+}
+
+@media screen and (max-width: 700px) {
+
+    body {
+        grid-template-columns: 0% 1fr;
+    }
+}

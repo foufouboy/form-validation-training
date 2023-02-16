@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Training</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="aside-img-container"></div>
+    <main class="hero">
+        <div class="form-container">
+            <form class="form">
+                <h1 class="form-title"><span class="order">Enter your credentials hihihi</span> 😊</h1>
+                <div class="inputs-container">
+                    <div class="input-container">
+                        <label for="country-input">Country</label>
+                        <select name="country-input" class="form-control" id="country-input" required>
+                            <option value="" label="Select a country... " selected>Select a country... </option>
+                            <optgroup id="country-optgroup-Americas" label="Americas">
+                                <option value="CA" label="Canada">Canada</option>
+                                <option value="US" label="United States">United States</option>
+                            </optgroup>
+                            <optgroup id="country-optgroup-Europe" label="Europe">
+                                <option value="BE" label="Belgium">Belgium</option>
+                                <option value="DK" label="Denmark">Denmark</option>
+                                <option value="FR" label="France">France</option>
+                                <option value="DE" label="Germany">Germany</option>
+                                <option value="IT" label="Italy">Italy</option>
+                                <option value="NL" label="Netherlands">Netherlands</option>
+                                <option value="ES" label="Spain">Spain</option>
+                                <option value="SE" label="Sweden">Sweden</option>
+                                <option value="UK" label="United Kingdom">United Kingdom</option>
+                            </optgroup>
+                            <optgroup id="country-optgroup-Oceania" label="Oceania">
+                                <option value="AU" label="Australia">Australia</option>
+                            </optgroup>
+                            <optgroup id="country-optgroup-Asia" label="Asia">
+                                <option value="IN" label="India">India</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label for="postal-code-input">Postal Code/Zip</label>
+                        <input type="text" id="postal-code-input" name="postal-code-input" placeholder="Please first choose a country" disabled required>
+                    </div>
+                    <div class="input-container">
+                        <label for="email-input">E-mail</label>
+                        <input type="email" id="email-input" name="email-input" placeholder="example@email.com" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="psw-input">Password</label>
+                        <input type="password" id="psw-input" name="psw-input" placeholder="Enter your nifty password..." pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" required> 
+                        <!-- 8 characters minimum, containing one special, capitalized, 
+                        minuscule and number -->
+                    </div>
+                    <div class="input-container">
+                        <label for="psw-confirmation-input">Password Confirmation</label>
+                        <input type="password" id="psw-confirmation-input" name="psw-confirmation-input" placeholder="Confirm your nifty password..." required>
+                    </div>
+                </div>
+                <button class="form-submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
